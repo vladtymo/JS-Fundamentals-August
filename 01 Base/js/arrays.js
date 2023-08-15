@@ -22,7 +22,7 @@ colors.unshift("brown");// insert first
 
 console.log("Colors: ", colors);
 
-let numbers = [4, 60, 1, -1, 0, -3, 99, 120, 1, -4, 44, -10];
+let numbers = [4, 60, 1, -1, 0, -3, 99, -4, 120, 1, -4, 44, -10];
 
 console.log("Index of 1: ", numbers.indexOf(1)); // 2
 console.log("Last Index of 1: ", numbers.lastIndexOf(1)); // 1
@@ -43,8 +43,8 @@ console.log("Numbers:", numbers);
 numbers.sort((a, b) => a - b);
 console.log("Numbers:", numbers);
 
-//numbers.fill(7, 1, 3);
-//console.log("Numbers:", numbers);
+numbers.fill(7, 1, 3);
+console.log("Numbers:", numbers);
 
 console.log("Filtered: ", numbers.filter((x) => x < 0));
 
