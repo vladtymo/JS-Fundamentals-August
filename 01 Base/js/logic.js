@@ -89,3 +89,13 @@ email = email || "not entered";
 console.log("Email:", email);
 
 //let result = hours < 8 && someFunction();
+
+// --------- thernary operator
+// syntax: condition ? true_value : false_value
+
+if (5 > 2)
+    console.log("Bigger!");
+else
+    console.log("Smaller");
+
+console.log(5 > 2 ? "Bigger" : "Smaller");
