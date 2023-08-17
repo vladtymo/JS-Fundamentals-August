@@ -62,3 +62,27 @@ console.log("Summ:", summ);
 // [r]ed + [g]reen + [b]lue = rgb
 const letters = colors.reduce((r, c) => r + c[0], '');
 console.log("Letters:", letters);
+
+// ----- TASK: check array for dublications
+numbers = [5, 2, 10, 33, 33, 40];
+
+numbers.sort((a, b) => a - b);
+
+// sorted: [2, 2, 2, 5, 5, 10, 33, 40]
+
+let res = numbers.filter((x, i) => x === numbers[i + 1]);
+console.log(res);
+
+if (res.length === 0)
+    console.log("All elements are unique!");
+else
+    console.log("Array has dublications!");
+
+// ----- TASK: find max element in the array
+numbers = [4, 1, 0, -2, 10, 23, 17, 11];
+
+// max:  23 
+// curr: 17
+
+let max = numbers.reduce((max, curr) => curr > max ? curr : max, numbers[0]);
+console.log(max);
