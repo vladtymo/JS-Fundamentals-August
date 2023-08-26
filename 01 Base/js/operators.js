@@ -71,6 +71,9 @@ console.log(number); // 354
 console.log(isNaN(number));
 console.log("Type of variable:", typeof (number));
 
+console.log(isNaN("123"));          // true - NaN value
+console.log(Number.isNaN("hello")); // true - Number type + NaN value
+
 // to integer: parseInt(value)
 // to real: parseFloat(value)
 console.log(parseInt("34.99")); // 34
