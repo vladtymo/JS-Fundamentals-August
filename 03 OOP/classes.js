@@ -11,6 +11,9 @@ class Product {
     // private fields (access only from this class)
     #quantity;
 
+    // static fields create only once for all instances
+    static count = 0;
+
     // initilize all required props
     constructor(name, price, quantity) {
         // create properties
@@ -19,6 +22,8 @@ class Product {
         this.rating = null;
         this.#quantity = quantity;
         this.inStock = quantity > 0 ? true : false;
+        // access static fields
+        Product.count++;
     }
 
     // metbods
@@ -39,6 +44,11 @@ class Product {
         if (value >= 0) // data validation
             this.price = value;
     }
+    // static method
+    static getCount() {
+        // does not have [this]
+        return Product.count;
+    }
 
     // ---- get / set
     get total() {
@@ -49,6 +59,8 @@ class Product {
             this._quantity = value;
     }
 }
+
+console.log("Product count:", Product.getCount());
 
 // ----- create class instance
 let my = new Product("Asus MG50", 11000, 5); // invoke ctor
@@ -74,14 +86,15 @@ my.applyDiscount(15);
 my.show(); // this = prod1
 my.showStatus();
 
+let your = new Product("Radeon RX 6600", 11499, 0);
+your.show();
+your.showStatus();
 
-// let your = new Product("Radeon RX 6600", 11499, 0);
-// your.show();
-// your.showStatus();
+let his = new Product("AFOX PCI-Ex", 1249, 2);
+his.show();
+his.showStatus();
 
-// let his = new Product("AFOX PCI-Ex", 1249, 2);
-// his.show();
-// his.showStatus();
+console.log("Product count:", Product.count);
 
 // -=-=-=-=-=-=- Interitance -=-=-=-=-=-=-
 class Monitor extends Product {
