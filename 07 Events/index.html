@@ -19,6 +19,10 @@
 
     <button id="btn3">Click Me! (using onclick)</button>
 
+    <div onclick="console.log('outer clicked!')" class="outer">
+        <div onclick="console.log('inner clicked!')" class="inner">Hello</div>
+    </div>
+
     <p>Mouse coords: <span id="coords-text"></span></p>
 
     <script src="./main.js"></script>
