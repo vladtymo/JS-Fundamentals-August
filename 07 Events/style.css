@@ -1,0 +1,23 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    background-color: rgb(102, 102, 102);
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    text-transform: uppercase;
+}
+
+/* #btn3 {
+    font-size: 30px;
+} */
+
+/* #btn3:active {
+    color: red;
+}
+#btn3:hover {
+    box-shadow: 1px 2px 10px black;
+} */
