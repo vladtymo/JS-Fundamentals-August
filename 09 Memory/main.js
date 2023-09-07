@@ -7,6 +7,8 @@ title.remove();
 let number = 10; // memory allocation
 let c = number;
 
+console.log(number);
+
 let user = { id: 1001, login: 'super' }; // memory allocation
 let admin = user; // assign reference
 
