@@ -95,7 +95,7 @@ const getNegative = function (x) { return -x; }
 changeArray(numbers, getIncrement);
 // 2 - using anonymous functions 
 changeArray(numbers, function (x) { return Math.abs(x); });
-// 3 - using arrow function 
+// 3 - using arrow function (ES6)
 changeArray(numbers, (x) => Math.abs(x));
 
 console.log("Changed array:", numbers);
